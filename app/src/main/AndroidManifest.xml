@@ -10,6 +10,26 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+        <activity android:name=".UserCategoryDetail"></activity>
+        <activity android:name=".UserCategoryActivity" />
+        <activity android:name=".Admin.AdminMaintainProductsActivity" />
+        <activity android:name=".SearchProductsActivity" />
+        <activity android:name=".Admin.AdminUserProductsActivity" />
+        <activity android:name=".Admin.AdminNewOrdersActivity" />
+        <activity android:name=".ConfirmFinalOrderActivity" />
+        <activity android:name=".CartActivity" />
+        <activity android:name=".ProductDetailsActivity" />
+        <activity android:name=".SettingsActivity" />
+        <activity android:name=".ResetPasswordActivity" />
+        <activity
+            android:name=".HomeActivity"
+            android:label="@string/title_activity_home"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Admin.AdminCategoryActivity" />
+        <activity android:name=".Admin.AdminAddNewProductActivity" />
+        <activity android:name=".RegisterUserActivity" />
+        <activity android:name=".LoginActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
