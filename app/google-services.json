@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "633478509328",
+    "project_id": "greenvilla-b0885",
+    "storage_bucket": "greenvilla-b0885.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:633478509328:android:1e2c77e80dc92ecd026b95",
+        "android_client_info": {
+          "package_name": "com.example.hp.greenvilla"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "633478509328-5t56mqdjniusbueui5k2sdk7ehjcfqj7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBr7W2NRcF5RxpCcf8NhVLyEmR6Stuezb8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "633478509328-5t56mqdjniusbueui5k2sdk7ehjcfqj7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
