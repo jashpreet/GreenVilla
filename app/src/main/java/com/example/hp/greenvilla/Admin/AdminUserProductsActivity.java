@@ -10,9 +10,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.hp.ecommerce.Model.Cart;
-import com.example.hp.ecommerce.R;
-import com.example.hp.ecommerce.ViewHolder.CartViewHolder;
+import com.example.hp.greenvilla.Model.Cart;
+import com.example.hp.greenvilla.R;
+import com.example.hp.greenvilla.ViewHolder.CartViewHolder;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.DatabaseReference;

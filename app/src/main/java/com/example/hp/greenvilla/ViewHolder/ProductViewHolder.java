@@ -6,8 +6,8 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.hp.ecommerce.Interface.ItemClickListener;
-import com.example.hp.ecommerce.R;
+import com.example.hp.greenvilla.Interface.ItemClickListener;
+import com.example.hp.greenvilla.R;
 
 public class ProductViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 

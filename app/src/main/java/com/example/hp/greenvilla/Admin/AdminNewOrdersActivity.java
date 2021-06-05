@@ -66,7 +66,7 @@ public class AdminNewOrdersActivity extends AppCompatActivity {
                             {
                                 String uID = getRef(position).getKey();
 
-                                Intent intent = new Intent(com.example.hp.ecommerce.Admin.AdminNewOrdersActivity.this, AdminUserProductsActivity.class);
+                                Intent intent = new Intent(com.example.hp.greenvilla.Admin.AdminNewOrdersActivity.this, AdminUserProductsActivity.class);
                                 intent.putExtra("uid", uID);
                                 startActivity(intent);
                             }
@@ -82,7 +82,7 @@ public class AdminNewOrdersActivity extends AppCompatActivity {
                                                 "No"
                                         };
 
-                                AlertDialog.Builder builder = new AlertDialog.Builder(com.example.hp.ecommerce.Admin.AdminNewOrdersActivity.this);
+                                AlertDialog.Builder builder = new AlertDialog.Builder(com.example.hp.greenvilla.Admin.AdminNewOrdersActivity.this);
                                 builder.setTitle("Have you shipped this order products ?");
 
                                 builder.setItems(options, new DialogInterface.OnClickListener() {

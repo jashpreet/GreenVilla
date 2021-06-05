@@ -72,11 +72,11 @@ public class AdminMaintainProductsActivity extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<Void> task)
             {
-                Intent intent = new Intent(com.example.hp.ecommerce.Admin.AdminMaintainProductsActivity.this, AdminCategoryActivity.class);
+                Intent intent = new Intent(com.example.hp.greenvilla.Admin.AdminMaintainProductsActivity.this, AdminCategoryActivity.class);
                 startActivity(intent);
                 finish();
 
-                Toast.makeText(com.example.hp.ecommerce.Admin.AdminMaintainProductsActivity.this, "The Product Is deleted successfully.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(com.example.hp.greenvilla.Admin.AdminMaintainProductsActivity.this, "The Product Is deleted successfully.", Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -117,9 +117,9 @@ public class AdminMaintainProductsActivity extends AppCompatActivity {
                 {
                     if (task.isSuccessful())
                     {
-                        Toast.makeText(com.example.hp.ecommerce.Admin.AdminMaintainProductsActivity.this, "Changes applied successfully.", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(com.example.hp.greenvilla.Admin.AdminMaintainProductsActivity.this, "Changes applied successfully.", Toast.LENGTH_SHORT).show();
 
-                        Intent intent = new Intent(com.example.hp.ecommerce.Admin.AdminMaintainProductsActivity.this, AdminCategoryActivity.class);
+                        Intent intent = new Intent(com.example.hp.greenvilla.Admin.AdminMaintainProductsActivity.this, AdminCategoryActivity.class);
                         startActivity(intent);
                         finish();
                     }

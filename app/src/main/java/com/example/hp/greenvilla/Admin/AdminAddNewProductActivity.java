@@ -162,14 +162,14 @@ public class AdminAddNewProductActivity extends AppCompatActivity {
             public void onFailure(@NonNull Exception e)
             {
                 String message = e.toString();
-                Toast.makeText(com.example.hp.ecommerce.Admin.AdminAddNewProductActivity.this, "Error: " + message, Toast.LENGTH_SHORT).show();
+                Toast.makeText(com.example.hp.greenvilla.Admin.AdminAddNewProductActivity.this, "Error: " + message, Toast.LENGTH_SHORT).show();
                 loadingBar.dismiss();
             }
         }).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
             @Override
             public void onSuccess(UploadTask.TaskSnapshot taskSnapshot)
             {
-                Toast.makeText(com.example.hp.ecommerce.Admin.AdminAddNewProductActivity.this, "Products Image uploaded Successfully...", Toast.LENGTH_SHORT).show();
+                Toast.makeText(com.example.hp.greenvilla.Admin.AdminAddNewProductActivity.this, "Products Image uploaded Successfully...", Toast.LENGTH_SHORT).show();
 
                 Task<Uri> urlTask = uploadTask.continueWithTask(new Continuation<UploadTask.TaskSnapshot, Task<Uri>>() {
                     @Override
@@ -191,7 +191,7 @@ public class AdminAddNewProductActivity extends AppCompatActivity {
                         {
                             downloadImageUrl = task.getResult().toString();
 
-                            Toast.makeText(com.example.hp.ecommerce.Admin.AdminAddNewProductActivity.this, "got the Products image Url Successfully...", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(com.example.hp.greenvilla.Admin.AdminAddNewProductActivity.this, "got the Products image Url Successfully...", Toast.LENGTH_SHORT).show();
 
                             SaveProductInfoToDatabase();
                         }
@@ -222,17 +222,17 @@ public class AdminAddNewProductActivity extends AppCompatActivity {
                     {
                         if (task.isSuccessful())
                         {
-                            Intent intent = new Intent(com.example.hp.ecommerce.Admin.AdminAddNewProductActivity.this, AdminCategoryActivity.class);
+                            Intent intent = new Intent(com.example.hp.greenvilla.Admin.AdminAddNewProductActivity.this, AdminCategoryActivity.class);
                             startActivity(intent);
 
                             loadingBar.dismiss();
-                            Toast.makeText(com.example.hp.ecommerce.Admin.AdminAddNewProductActivity.this, "Products is added successfully..", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(com.example.hp.greenvilla.Admin.AdminAddNewProductActivity.this, "Products is added successfully..", Toast.LENGTH_SHORT).show();
                         }
                         else
                         {
                             loadingBar.dismiss();
                             String message = task.getException().toString();
-                            Toast.makeText(com.example.hp.ecommerce.Admin.AdminAddNewProductActivity.this, "Error: " + message, Toast.LENGTH_SHORT).show();
+                            Toast.makeText(com.example.hp.greenvilla.Admin.AdminAddNewProductActivity.this, "Error: " + message, Toast.LENGTH_SHORT).show();
                         }
                     }
                 });

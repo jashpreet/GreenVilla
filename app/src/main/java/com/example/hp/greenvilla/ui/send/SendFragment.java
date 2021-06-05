@@ -1,4 +1,4 @@
-package com.example.hp.greenvilla.ui;
+package com.example.hp.greenvilla.ui.send;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -12,19 +12,19 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
-import com.example.hp.ecommerce.R;
+import com.example.hp.greenvilla.R;
 
-public class ToolsFragment extends Fragment {
+public class SendFragment extends Fragment {
 
-    private ToolsViewModel toolsViewModel;
+    private SendViewModel sendViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        toolsViewModel =
-                ViewModelProviders.of(this).get(ToolsViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_tools, container, false);
-        final TextView textView = root.findViewById(R.id.text_tools);
-        toolsViewModel.getText().observe(this, new Observer<String>() {
+        sendViewModel =
+                ViewModelProviders.of(this).get(SendViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_send, container, false);
+        final TextView textView = root.findViewById(R.id.text_send);
+        sendViewModel.getText().observe(this, new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);

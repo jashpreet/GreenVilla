@@ -16,9 +16,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.hp.ecommerce.Model.Cart;
-import com.example.hp.ecommerce.Prevalent.Prevalent;
-import com.example.hp.ecommerce.ViewHolder.CartViewHolder;
+import com.example.hp.greenvilla.Model.Cart;
+import com.example.hp.greenvilla.Prevalent.Prevalent;
+import com.example.hp.greenvilla.ViewHolder.CartViewHolder;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -60,7 +60,7 @@ public class CartActivity extends AppCompatActivity {
             {
                 txtTotalAmount.setText("Total Price = $" + String.valueOf(overTotalPrice));
 
-                Intent intent = new Intent(com.example.hp.ecommerce.CartActivity.this, ConfirmFinalOrderActivity.class);
+                Intent intent = new Intent(com.example.hp.greenvilla.CartActivity.this, ConfirmFinalOrderActivity.class);
                 intent.putExtra("Total Price", String.valueOf(overTotalPrice));
                 startActivity(intent);
                 finish();
@@ -106,7 +106,7 @@ public class CartActivity extends AppCompatActivity {
                                         "Edit",
                                         "Remove"
                                 };
-                        AlertDialog.Builder builder = new AlertDialog.Builder(com.example.hp.ecommerce.CartActivity.this);
+                        AlertDialog.Builder builder = new AlertDialog.Builder(com.example.hp.greenvilla.CartActivity.this);
                         builder.setTitle("Cart Options:");
 
                         builder.setItems(options, new DialogInterface.OnClickListener() {
@@ -115,7 +115,7 @@ public class CartActivity extends AppCompatActivity {
                             {
                                 if (i == 0)
                                 {
-                                    Intent intent = new Intent(com.example.hp.ecommerce.CartActivity.this, ProductDetailsActivity.class);
+                                    Intent intent = new Intent(com.example.hp.greenvilla.CartActivity.this, ProductDetailsActivity.class);
                                     intent.putExtra("pid", model.getPid());
                                     startActivity(intent);
                                 }
@@ -132,9 +132,9 @@ public class CartActivity extends AppCompatActivity {
                                                 {
                                                     if (task.isSuccessful())
                                                     {
-                                                        Toast.makeText(com.example.hp.ecommerce.CartActivity.this, "Item removed successfully.", Toast.LENGTH_SHORT).show();
+                                                        Toast.makeText(com.example.hp.greenvilla.CartActivity.this, "Item removed successfully.", Toast.LENGTH_SHORT).show();
 
-                                                        Intent intent = new Intent(com.example.hp.ecommerce.CartActivity.this, HomeActivity.class);
+                                                        Intent intent = new Intent(com.example.hp.greenvilla.CartActivity.this, HomeActivity.class);
                                                         startActivity(intent);
                                                     }
                                                 }
@@ -186,7 +186,7 @@ public class CartActivity extends AppCompatActivity {
                         txtMsg1.setText("Congratulations, your final order has been Shipped successfully. Soon you will received your order at your door step.");
                         NextProcessBtn.setVisibility(View.GONE);
 
-                        Toast.makeText(com.example.hp.ecommerce.CartActivity.this, "you can purchase more products, once you received your first final order.", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(com.example.hp.greenvilla.CartActivity.this, "you can purchase more products, once you received your first final order.", Toast.LENGTH_SHORT).show();
                     }
                     else if(shippingState.equals("not shipped"))
                     {
@@ -196,7 +196,7 @@ public class CartActivity extends AppCompatActivity {
                         txtMsg1.setVisibility(View.VISIBLE);
                         NextProcessBtn.setVisibility(View.GONE);
 
-                        Toast.makeText(com.example.hp.ecommerce.CartActivity.this, "you can purchase more products, once you received your first final order.", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(com.example.hp.greenvilla.CartActivity.this, "you can purchase more products, once you received your first final order.", Toast.LENGTH_SHORT).show();
                     }
                 }
             }

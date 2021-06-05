@@ -34,7 +34,7 @@ public class AdminCategoryActivity extends AppCompatActivity {
         addproductButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(com.example.hp.ecommerce.Admin.AdminCategoryActivity.this, AdminAddNewProductActivity.class);
+                Intent intent = new Intent(com.example.hp.greenvilla.Admin.AdminCategoryActivity.this, AdminAddNewProductActivity.class);
                 startActivity(intent);
             }
         });
@@ -43,7 +43,7 @@ public class AdminCategoryActivity extends AppCompatActivity {
             @Override
             public void onClick(View view)
             {
-                Intent intent = new Intent(com.example.hp.ecommerce.Admin.AdminCategoryActivity.this, HomeActivity.class);
+                Intent intent = new Intent(com.example.hp.greenvilla.Admin.AdminCategoryActivity.this, HomeActivity.class);
                 intent.putExtra("Admin", "Admin");
                 startActivity(intent);
             }
@@ -54,7 +54,7 @@ public class AdminCategoryActivity extends AppCompatActivity {
             @Override
             public void onClick(View view)
             {
-                Intent intent = new Intent(com.example.hp.ecommerce.Admin.AdminCategoryActivity.this, MainActivity.class);
+                Intent intent = new Intent(com.example.hp.greenvilla.Admin.AdminCategoryActivity.this, MainActivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(intent);
                 finish();
@@ -65,7 +65,7 @@ public class AdminCategoryActivity extends AppCompatActivity {
             @Override
             public void onClick(View view)
             {
-                Intent intent = new Intent(com.example.hp.ecommerce.Admin.AdminCategoryActivity.this, AdminNewOrdersActivity.class);
+                Intent intent = new Intent(com.example.hp.greenvilla.Admin.AdminCategoryActivity.this, AdminNewOrdersActivity.class);
                 startActivity(intent);
             }
         });

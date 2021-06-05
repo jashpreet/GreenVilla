@@ -11,7 +11,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.hp.ecommerce.Prevalent.Prevalent;
+import com.example.hp.greenvilla.Prevalent.Prevalent;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DatabaseReference;
@@ -121,9 +121,9 @@ public class ConfirmFinalOrderActivity extends AppCompatActivity {
                                 {
                                     if (task.isSuccessful())
                                     {
-                                        Toast.makeText(com.example.hp.ecommerce.ConfirmFinalOrderActivity.this, "your final order has been placed successfully.", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(com.example.hp.greenvilla.ConfirmFinalOrderActivity.this, "your final order has been placed successfully.", Toast.LENGTH_SHORT).show();
 
-                                        Intent intent = new Intent(com.example.hp.ecommerce.ConfirmFinalOrderActivity.this, HomeActivity.class);
+                                        Intent intent = new Intent(com.example.hp.greenvilla.ConfirmFinalOrderActivity.this, HomeActivity.class);
                                         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                                         startActivity(intent);
                                         finish();

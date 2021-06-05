@@ -12,8 +12,8 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.cepheuen.elegantnumberbutton.view.ElegantNumberButton;
-import com.example.hp.ecommerce.Model.Products;
-import com.example.hp.ecommerce.Prevalent.Prevalent;
+import com.example.hp.greenvilla.Model.Products;
+import com.example.hp.greenvilla.Prevalent.Prevalent;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
@@ -60,7 +60,7 @@ public class ProductDetailsActivity extends AppCompatActivity {
             {
                 if (state.equals("Order Placed") || state.equals("Order Shipped"))
                 {
-                    Toast.makeText(com.example.hp.ecommerce.ProductDetailsActivity.this, "you can add purchase more products, once your order is shipped or confirmed.", Toast.LENGTH_LONG).show();
+                    Toast.makeText(com.example.hp.greenvilla.ProductDetailsActivity.this, "you can add purchase more products, once your order is shipped or confirmed.", Toast.LENGTH_LONG).show();
                 }
                 else
                 {
@@ -118,9 +118,9 @@ public class ProductDetailsActivity extends AppCompatActivity {
                                         {
                                             if (task.isSuccessful())
                                             {
-                                                Toast.makeText(com.example.hp.ecommerce.ProductDetailsActivity.this, "Added to Cart List.", Toast.LENGTH_SHORT).show();
+                                                Toast.makeText(com.example.hp.greenvilla.ProductDetailsActivity.this, "Added to Cart List.", Toast.LENGTH_SHORT).show();
 
-                                                Intent intent = new Intent(com.example.hp.ecommerce.ProductDetailsActivity.this, HomeActivity.class);
+                                                Intent intent = new Intent(com.example.hp.greenvilla.ProductDetailsActivity.this, HomeActivity.class);
                                                 startActivity(intent);
                                             }
                                         }
