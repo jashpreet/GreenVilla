@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view)
             {
-                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                Intent intent = new Intent(com.example.hp.greenvilla.MainActivity.this, com.example.hp.greenvilla.LoginActivity.class);
                 startActivity(intent);
             }
         });
@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view)
             {
-                Intent intent = new Intent(MainActivity.this, RegisterUserActivity.class);
+                Intent intent = new Intent(com.example.hp.greenvilla.MainActivity.this, com.example.hp.greenvilla.RegisterUserActivity.class);
                 startActivity(intent);
             }
         });
@@ -94,23 +94,23 @@ public class MainActivity extends AppCompatActivity {
                     {
                         if (usersData.getPassword().equals(password))
                         {
-                            Toast.makeText(MainActivity.this, "Please wait, you are already logged in...", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(com.example.hp.greenvilla.MainActivity.this, "Please wait, you are already logged in...", Toast.LENGTH_SHORT).show();
                             loadingBar.dismiss();
 
-                            Intent intent = new Intent(MainActivity.this, HomeActivity.class);
+                            Intent intent = new Intent(com.example.hp.greenvilla.MainActivity.this, com.example.hp.greenvilla.HomeActivity.class);
                             Prevalent.currentOnlineUser = usersData;
                             startActivity(intent);
                         }
                         else
                         {
                             loadingBar.dismiss();
-                            Toast.makeText(MainActivity.this, "Password is incorrect.", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(com.example.hp.greenvilla.MainActivity.this, "Password is incorrect.", Toast.LENGTH_SHORT).show();
                         }
                     }
                 }
                 else
                 {
-                    Toast.makeText(MainActivity.this, "Account with this " + number + " does not exist.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(com.example.hp.greenvilla.MainActivity.this, "Account with this " + number + " does not exist.", Toast.LENGTH_SHORT).show();
                     loadingBar.dismiss();
                 }
             }

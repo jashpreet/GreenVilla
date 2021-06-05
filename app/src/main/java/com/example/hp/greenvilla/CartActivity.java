@@ -60,7 +60,7 @@ public class CartActivity extends AppCompatActivity {
             {
                 txtTotalAmount.setText("Total Price = $" + String.valueOf(overTotalPrice));
 
-                Intent intent = new Intent(com.example.hp.greenvilla.CartActivity.this, ConfirmFinalOrderActivity.class);
+                Intent intent = new Intent(com.example.hp.greenvilla.CartActivity.this, com.example.hp.greenvilla.ConfirmFinalOrderActivity.class);
                 intent.putExtra("Total Price", String.valueOf(overTotalPrice));
                 startActivity(intent);
                 finish();
@@ -134,7 +134,7 @@ public class CartActivity extends AppCompatActivity {
                                                     {
                                                         Toast.makeText(com.example.hp.greenvilla.CartActivity.this, "Item removed successfully.", Toast.LENGTH_SHORT).show();
 
-                                                        Intent intent = new Intent(com.example.hp.greenvilla.CartActivity.this, HomeActivity.class);
+                                                        Intent intent = new Intent(com.example.hp.greenvilla.CartActivity.this, com.example.hp.greenvilla.HomeActivity.class);
                                                         startActivity(intent);
                                                     }
                                                 }

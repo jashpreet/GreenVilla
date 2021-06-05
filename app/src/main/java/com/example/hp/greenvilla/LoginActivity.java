@@ -24,6 +24,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 public class LoginActivity extends AppCompatActivity {
+
     private EditText InputNumber, InputPassword;
     private Button LoginButton;
     private ProgressDialog loadingBar;
@@ -61,7 +62,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View view)
             {
-                Intent intent = new Intent(LoginActivity.this, ResetPasswordActivity.class);
+                Intent intent = new Intent(com.example.hp.greenvilla.LoginActivity.this, com.example.hp.greenvilla.ResetPasswordActivity.class);
                 intent.putExtra("check", "login");
                 startActivity(intent);
             }
@@ -144,40 +145,40 @@ public class LoginActivity extends AppCompatActivity {
 
                     //if (usersData.getNumber().equals(number))
                     //{
-                    Log.e("TAG", "stop 2");
-                    if (usersData.getPassword().equals(password))
-                    {
-                        Log.e("TAG", "stop 3");
-                        if (parentDbName.equals("Admins"))
+                        Log.e("TAG", "stop 2");
+                        if (usersData.getPassword().equals(password))
                         {
-                            Toast.makeText(LoginActivity.this, "Welcome Admin, you are logged in Successfully...", Toast.LENGTH_SHORT).show();
-                            loadingBar.dismiss();
+                            Log.e("TAG", "stop 3");
+                            if (parentDbName.equals("Admins"))
+                            {
+                                Toast.makeText(com.example.hp.greenvilla.LoginActivity.this, "Welcome Admin, you are logged in Successfully...", Toast.LENGTH_SHORT).show();
+                                loadingBar.dismiss();
 
-                            Intent intent = new Intent(LoginActivity.this, AdminCategoryActivity.class);
-                            startActivity(intent);
-                        }
-                        else if (parentDbName.equals("Users"))
-                        {
-                            Log.e("TAG", "stop 4");
-                            Toast.makeText(LoginActivity.this, "logged in Successfully...", Toast.LENGTH_SHORT).show();
-                            Log.e("TAG", "stop 5");
-                            loadingBar.dismiss();
+                                Intent intent = new Intent(com.example.hp.greenvilla.LoginActivity.this, AdminCategoryActivity.class);
+                                startActivity(intent);
+                            }
+                            else if (parentDbName.equals("Users"))
+                            {
+                                Log.e("TAG", "stop 4");
+                                Toast.makeText(com.example.hp.greenvilla.LoginActivity.this, "logged in Successfully...", Toast.LENGTH_SHORT).show();
+                                Log.e("TAG", "stop 5");
+                                loadingBar.dismiss();
 
-                            Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
-                            Prevalent.currentOnlineUser = usersData;
-                            startActivity(intent);
-                        }
-                        //  }
+                                Intent intent = new Intent(com.example.hp.greenvilla.LoginActivity.this, com.example.hp.greenvilla.HomeActivity.class);
+                                Prevalent.currentOnlineUser = usersData;
+                                startActivity(intent);
+                            }
+                      //  }
                         else
                         {
                             loadingBar.dismiss();
-                            Toast.makeText(LoginActivity.this, "Password is incorrect.", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(com.example.hp.greenvilla.LoginActivity.this, "Password is incorrect.", Toast.LENGTH_SHORT).show();
                         }
                     }
                 }
                 else
                 {
-                    Toast.makeText(LoginActivity.this, "Account with this " + number + " does not exist.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(com.example.hp.greenvilla.LoginActivity.this, "Account with this " + number + " does not exist.", Toast.LENGTH_SHORT).show();
                     loadingBar.dismiss();
                 }
             }

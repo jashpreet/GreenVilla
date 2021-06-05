@@ -120,7 +120,7 @@ public class ProductDetailsActivity extends AppCompatActivity {
                                             {
                                                 Toast.makeText(com.example.hp.greenvilla.ProductDetailsActivity.this, "Added to Cart List.", Toast.LENGTH_SHORT).show();
 
-                                                Intent intent = new Intent(com.example.hp.greenvilla.ProductDetailsActivity.this, HomeActivity.class);
+                                                Intent intent = new Intent(com.example.hp.greenvilla.ProductDetailsActivity.this, com.example.hp.greenvilla.HomeActivity.class);
                                                 startActivity(intent);
                                             }
                                         }
