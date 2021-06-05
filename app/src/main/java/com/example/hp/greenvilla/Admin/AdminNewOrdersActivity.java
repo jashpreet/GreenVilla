@@ -15,8 +15,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.hp.ecommerce.Model.AdminOrders;
-import com.example.hp.ecommerce.R;
+import com.example.hp.greenvilla.Model.AdminOrders;
+import com.example.hp.greenvilla.R;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.DatabaseReference;

@@ -7,9 +7,9 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.hp.ecommerce.HomeActivity;
-import com.example.hp.ecommerce.MainActivity;
-import com.example.hp.ecommerce.R;
+import com.example.hp.greenvilla.HomeActivity;
+import com.example.hp.greenvilla.MainActivity;
+import com.example.hp.greenvilla.R;
 
 public class AdminCategoryActivity extends AppCompatActivity {
 
